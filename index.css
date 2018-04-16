@@ -1,0 +1,160 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: AntiqueWhite;
+    text-align: center;
+}
+main {
+  font-size: 25px;
+  font-family: 'Poiret One', cursive;
+}
+/* main text */
+.custom {
+  padding-left: 150px;
+  padding-right: 150px;
+  text-align: center;
+}
+/* division of the page 100% , 50% (2 coloums)*/
+.box {
+    width: 100%;
+}
+
+
+ul {
+    font-size: 30px;
+    font-family: 'Quantico', sans-serif;
+    list-style-type:none;
+    margin: 10px;
+    padding: 0;
+    overflow:hidden;
+    padding-left: 50px;
+}
+/* dropdown nav */
+.dropdown-content {
+    display: none;
+    font-size: 25px;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 5px 10px 18px #888888;
+    z-index: 1;
+    border-bottom: 12px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display:list-item;
+
+}
+/*end dropdown nav */
+
+
+li {
+    float:left ;
+}
+
+li a {
+    display:block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration:none;
+}
+
+li a:hover {
+    background-color: rgb(245, 211, 173);         /*is equivalent to:*/
+    border-radius:  2em 1em 0.4em / 0.3em 3em;    /*  border-top-left-radius: 2em 0.3em;*/
+                                                  /* border-top-right-radius: 1em 3em;*/
+}                                                 /*  border-bottom-left-radius: 1em 3em;  */
+
+a:hover {
+  cursor: pointer;
+}
+footer {
+    font-family: 'Press Start 2P', cursive;
+    position: fixed;
+    padding: 10px;
+    text-align:center;
+    margin-top: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*moving animation*/
+.movinganimation {
+
+    position: relative;
+    -webkit-animation-name: moving; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: moving;
+    animation-duration: 4s;
+}
+@-webkit-keyframes moving {
+      0%   {left:0px; top:0px;}
+      33%  {left:400px; top:0px;}
+      66%  {left:-400px; top:0px;}
+      100% {left:0px; top:0px;}
+} /*end moving animation */
+
+
+/* opacity animation */
+
+@keyframes opacityanimation {
+   from {opacity: 1;}
+   to {opacity: 0.1;}
+}
+.opacityanimation {
+   opacity: 0.1;
+   animation-name: opacityanimation;
+   animation-duration: 4s;
+} /*end opacity animation */
+
+/* fadeInDown animation*/
+.animated {
+
+            -webkit-animation-duration: 1s;
+            animation-duration:1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+         }
+        @-webkit-keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               -webkit-transform: translateY(-40px);
+            }
+            100% {
+               opacity: 1;
+               -webkit-transform: translateY(0);
+            }
+         }
+        @keyframes fadeInDown {
+            0% {
+               opacity: 0;
+               transform: translateY(-40px);
+            }
+            100% {
+               opacity: 1;
+               transform: translateY(0);
+            }
+         }
+        .fadeInDown {
+            -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+         }
+/*end fadeInDown animation*/
